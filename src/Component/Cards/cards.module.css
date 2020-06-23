@@ -1,13 +1,24 @@
 .container{
-    margin:50px 0;
+    width:100%;
+    margin:20px 0;
 }
 
 .card{
-    margin: 0 2% !important;
+    margin: 0 1% !important;
+    padding:0;
+}
+
+.dark{
+    text-decoration-color: #FAFAFA;
+    background:black;
 }
 
 .infected{
     border-bottom: 10px solid rgba(0, 0, 255, 0.5);
+}
+
+.active{
+    border-bottom: 10px solid rgba(255, 196, 0, 0.842);
 }
 
 .recovered{

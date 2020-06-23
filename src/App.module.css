@@ -1,5 +1,5 @@
 body{
-    background-color: antiquewhite;
+    background-color: #FBFBFB ;
 }
 
 .container{
@@ -10,7 +10,7 @@ body{
 }
 .image{
     width:370px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 @media (max-width:770px){

@@ -2,6 +2,7 @@ import React,{useEffect,useState} from 'react'
 import {fetchDailyData} from '../../api'
 import {Line,Bar} from 'react-chartjs-2'
 import styles from './charts.module.css'
+import 'chartjs-plugin-datalabels'
 
 const Charts = ({data:{confirmed,recovered,deaths},country})=>{
     const [dailyData,setDailyData] = useState([])
@@ -23,12 +24,25 @@ const barChart=(
                     'rgba(0, 0, 255, 0.5)',
                     'rgba(0,255,0, 0.5)',
                     'rgba(255, 0, 0, 0.5)'],
-                    data:[confirmed.value,recovered.value,deaths.value]
+                data:[confirmed.value,recovered.value,deaths.value]
             }]
         }}
         options={{
             legend:{display:false},
-            title:{display:true, text:`${country}`}
+            title:{display:true, text:`${country}`},
+            scales: {
+                yAxes: [{
+                  display: false
+                }]
+            },
+            plugins: {
+                datalabels: {
+                   display: true,
+                   color: 'black',
+                   anchor:'end',
+                   align:'top'
+                }
+             }
         }}
     />):null
 )
@@ -54,7 +68,7 @@ const lineChart =(
 
     return (
         <div className={styles.container}>
-            {country ? barChart : lineChart}
+            {country!=='global' ? barChart : lineChart}
         </div>
     )
 }
