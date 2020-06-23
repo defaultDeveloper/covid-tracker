@@ -40,7 +40,7 @@ const App = () => {
                         <Cards data={data} country={country} theme={theme}/>
                         <Countrypicker handleCountryChange={handleCountryChange} />
                         <Charts data={data} country={country} />
-                        <Toggle theme={theme} toggleTheme={themeToggler} />
+                        {/* <Toggle theme={theme} toggleTheme={themeToggler} /> */}
                     </div>
                 </>
             </ThemeProvider>
