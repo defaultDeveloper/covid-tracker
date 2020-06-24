@@ -1,16 +1,11 @@
 .container{
     width:100%;
-    margin:20px 0;
+    margin:10px 0;
 }
 
 .card{
     margin: 0 1% !important;
     padding:0;
-}
-
-.dark{
-    text-decoration-color: #FAFAFA;
-    background:black;
 }
 
 .infected{
