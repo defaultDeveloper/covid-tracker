@@ -13,6 +13,10 @@ body{
     margin-top: 20px;
 }
 
+.content{
+    margin: 0;
+    padding-bottom: 40px;
+}
 @media (max-width:770px){
     .container{
         margin: 0 10%;

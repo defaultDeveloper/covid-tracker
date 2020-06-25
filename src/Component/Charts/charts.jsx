@@ -38,7 +38,7 @@ const barChart=(
             plugins: {
                 datalabels: {
                    display: true,
-                   color: 'black',
+                   color: 'grey',
                    anchor:'end',
                    align:'top'
                 }

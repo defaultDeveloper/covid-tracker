@@ -10,7 +10,6 @@ export const fetchData = async (country)=>{
          finalUrl=`${url}/countries/${country}`
      }
     const {data:{confirmed,recovered,deaths,lastUpdate}} = await axios.get(finalUrl)
-    console.log(confirmed)
     return {confirmed,recovered,deaths,lastUpdate}
  } catch (error) {
      console.error(error.message)
@@ -38,6 +37,17 @@ export const fetchCountries = async ()=>{
     try{
         const {data:{countries}} = await axios.get(`${url}/countries`)
         return countries.map(country=> country.name)
+    }
+    catch(error){
+    console.log(error.message)
+    }
+}
+
+export const fetchNews = async ()=>{
+    try{
+        const {data} = await axios.get(`https://cors-anywhere.herokuapp.com/https://covid-news-server.herokuapp.com/news`)
+        console.log(data)
+        return data
     }
     catch(error){
     console.log(error.message)

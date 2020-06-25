@@ -1,3 +1,5 @@
 export{ default as Cards} from './Cards/cards'
 export{ default as Charts} from './Charts/charts'
 export{ default as Countrypicker} from './CountryPicker/countrypicker'
+export{ default as News} from './News/news'
+export{ default as LabelBottomNavigation} from './Navigation/navigation'
