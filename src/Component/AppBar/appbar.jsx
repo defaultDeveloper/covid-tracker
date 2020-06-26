@@ -13,9 +13,7 @@ const useStyles = makeStyles((theme) => ({
     app: {
         backgroundColor: "black",
     },
-    menuButton: {
-        marginRight: theme.spacing(2),
-    },
+    
     title: {
         flexGrow: 1,
     },

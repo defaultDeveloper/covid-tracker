@@ -30,8 +30,8 @@ const App = () => {
   return (
     <ThemeProvider theme={muiTheme}>
       <CssBaseline />
+      <ButtonAppBar toggleDarkTheme={toggleDarkTheme}/>
       <div className={styles.container}>
-        <ButtonAppBar toggleDarkTheme={toggleDarkTheme}/>
         <Router>
           <div className={styles.content}>
             <Routes />
