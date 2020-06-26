@@ -5,10 +5,10 @@ import Homepage from './home'
 
 const Routes = () => {
     return <div>
-        <Route exact path="/covid-tracker">
+        <Route exact path={'/'}>
             <Homepage />
         </Route>
-        <Route path="/news">
+        <Route path={'/news'}>
             <News />
         </Route>
     </div>

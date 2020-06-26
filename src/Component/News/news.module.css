@@ -4,8 +4,12 @@
 }
 
 .card{
-    margin: 1% 0 !important;
+    margin: 1% 1% !important;
     padding:0;
+}
+
+.media{
+    height:160px;
 }
 
 @media (max-width:770px){

@@ -46,7 +46,6 @@ export const fetchCountries = async ()=>{
 export const fetchNews = async ()=>{
     try{
         const {data} = await axios.get(`https://cors-anywhere.herokuapp.com/https://covid-news-server.herokuapp.com/news`)
-        console.log(data)
         return data
     }
     catch(error){

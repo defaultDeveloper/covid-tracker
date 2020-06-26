@@ -3,9 +3,11 @@ import {fetchDailyData} from '../../api'
 import {Line,Bar} from 'react-chartjs-2'
 import styles from './charts.module.css'
 import 'chartjs-plugin-datalabels'
+import { useTheme } from '@material-ui/core/styles'
 
 const Charts = ({data:{confirmed,recovered,deaths},country})=>{
     const [dailyData,setDailyData] = useState([])
+    const theme = useTheme()
     useEffect(()=>{
         const fetchApi = async()=>{
         setDailyData(await fetchDailyData())
@@ -25,20 +27,22 @@ const barChart=(
                     'rgba(0,255,0, 0.5)',
                     'rgba(255, 0, 0, 0.5)'],
                 data:[confirmed.value,recovered.value,deaths.value]
-            }]
+            }],
+            fontColor:theme.palette.type==='light'?'black':'white',
         }}
         options={{
             legend:{display:false},
-            title:{display:true, text:`${country}`},
+            title:{display:true, text:`${country}`,fontColor:theme.palette.type==='light'?'black':'white'},
             scales: {
                 yAxes: [{
                   display: false
                 }]
             },
+            //plugins for the values as bar headers
             plugins: {
                 datalabels: {
                    display: true,
-                   color: 'grey',
+                   color: theme.palette.type==='light'?'black':'white',
                    anchor:'end',
                    align:'top'
                 }
@@ -65,7 +69,8 @@ const lineChart =(
          }]
         }}
         />):null)
-
+    
+    //Only show line chart if country selected is global
     return (
         <div className={styles.container}>
             {country!=='global' ? barChart : lineChart}
