@@ -69,7 +69,7 @@ const lineChart =(
                 fill:true
             },{
                 data : dailyData.map(({recovered})=>recovered),
-                label:'REcovered',
+                label:'Recovered',
                 borderColor:'rgba(0,255,0, 0.5)',
                 fill:true
             },{

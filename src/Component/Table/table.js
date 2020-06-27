@@ -8,7 +8,6 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import styles from './table.module.css'
 import { fetchStateData } from '../../api'
-import { useTheme } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
 const useStyles = makeStyles({
@@ -21,8 +20,6 @@ const useStyles = makeStyles({
 export default function SimpleTable() {
     const classes =  useStyles()
     const [stateData, setStateData] = React.useState([])
-    const theme = useTheme()
-    console.log(theme)
     React.useEffect(() => {
         (async function () {
             setStateData(await fetchStateData())
@@ -31,7 +28,7 @@ export default function SimpleTable() {
 
     return (
         <div className={styles.container}>
-            <Grid xs={12}>
+            <Grid item xs={12}>
                 <TableContainer component={Paper}>
                     <Table aria-label="simple table" size="small">
                         <TableHead>
