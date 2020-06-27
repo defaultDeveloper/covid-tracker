@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Cards, Countrypicker, Charts } from './Component'
+import { Cards, Countrypicker, Charts,SimpleTable } from './Component'
 import styles from './App.module.css'
 import { fetchData } from './api'
 
@@ -29,6 +29,7 @@ const Homepage = () => {
             <Cards data={data} country={country}/>
             <Countrypicker handleCountryChange={handleCountryChange} />
             <Charts data={data} country={country} />
+            {country==='India'?<SimpleTable/> : null}
         </div>
     )
 }

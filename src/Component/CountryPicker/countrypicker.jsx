@@ -11,7 +11,7 @@ const Countrypicker = ({handleCountryChange})=>{
         (async function(){
             setCountries(await fetchCountries())
         }())
-    },[setCountries])
+    },[])
 
     return (
         <FormControl styles={styles.formControl}>

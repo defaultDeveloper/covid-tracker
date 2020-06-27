@@ -20,8 +20,8 @@ export default function AlertDialog({ open, handleClose, data: { confirmed, reco
         <DialogTitle id="alert-dialog-title">{"India Stats"}</DialogTitle>
         <DialogContent>
           {open ? (<DialogContentText id="alert-dialog-description">
-            <Typography>Recovery% is {(recovered.value / confirmed.value * 100)}%.</Typography>
-            <Typography>Death% is {(deaths.value / confirmed.value * 100)}%.</Typography>
+            <Typography>Recovery% is {Math.trunc(recovered.value / confirmed.value * 100)}%.</Typography>
+            <Typography>Death% is {Math.trunc(deaths.value / confirmed.value * 100)}%.</Typography>
           </DialogContentText>) : <DialogContentText id="alert-dialog-description">
               No Stats Available.
           </DialogContentText>}

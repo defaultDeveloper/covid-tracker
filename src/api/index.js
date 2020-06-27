@@ -52,3 +52,13 @@ export const fetchNews = async ()=>{
     console.log(error.message)
     }
 }
+
+export const fetchStateData = async ()=>{
+    try{
+        const {data} = await axios.get(`${url}/countries/India/confirmed`)
+        return data
+    }
+    catch(error){
+    console.log(error.message)
+    }
+}
