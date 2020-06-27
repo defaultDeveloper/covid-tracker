@@ -25,7 +25,7 @@ const Homepage = () => {
     }
 
     return (
-        <div className={styles.container}>
+        <div className={styles.home}>
             <Cards data={data} country={country}/>
             <Countrypicker handleCountryChange={handleCountryChange} />
             <Charts data={data} country={country} />

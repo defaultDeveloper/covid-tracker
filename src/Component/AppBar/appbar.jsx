@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
     app: {
         backgroundColor: "black",
     },
-    
     title: {
         flexGrow: 1,
     },

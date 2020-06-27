@@ -19,6 +19,14 @@ body{
     width:100%;
 }
 
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    margin: 0;
+}
+
 @media (max-width:770px){
     .container{
         margin: 0 2%;
