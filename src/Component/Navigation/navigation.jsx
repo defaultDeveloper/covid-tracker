@@ -20,7 +20,7 @@ export default function LabelBottomNavigation() {
         <div>
             <div className={styles.phantom} />
             <div className={styles.footer}>
-                <BottomNavigation value={value} onChange={handleChange} className={styles.root}>
+                <BottomNavigation value={value} onChange={handleChange} showLabels className={styles.root}>
                     <BottomNavigationAction label="Count" value="count" onClick={() => history.push('/')} icon={<LanguageIcon />} />
                     <BottomNavigationAction label="News" value="news" onClick={() => history.push('/news')} icon={<InfoIcon />} />
                 </BottomNavigation>

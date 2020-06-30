@@ -26,8 +26,8 @@ const Homepage = () => {
 
     return (
         <div className={styles.home}>
-            <Cards data={data} country={country}/>
             <Countrypicker handleCountryChange={handleCountryChange} />
+            <Cards data={data} country={country}/>
             <Charts data={data} country={country} />
             {country==='India'?<SimpleTable/> : null}
         </div>

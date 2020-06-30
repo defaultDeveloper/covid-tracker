@@ -1,5 +1,8 @@
 import axios from 'axios'
 
+/**
+ * Get either global data or based on the selected country.
+ */
 const url = 'https://covid19.mathdro.id/api'
 export const fetchData = async (country)=>{
  try {
@@ -16,6 +19,9 @@ export const fetchData = async (country)=>{
  }
 }
 
+/**
+ * Get daily data for Global - used for the line chart
+ */
 export const fetchDailyData = async ()=>{
     try{
         const {data} = await axios.get(`${url}/daily`)
@@ -33,6 +39,9 @@ export const fetchDailyData = async ()=>{
     }
 }
 
+/**
+ * Get the list of countries
+ */
 export const fetchCountries = async ()=>{
     try{
         const {data:{countries}} = await axios.get(`${url}/countries`)
@@ -43,8 +52,12 @@ export const fetchCountries = async ()=>{
     }
 }
 
+/**
+ * Get the headlines on COVID
+ */
 export const fetchNews = async ()=>{
     try{
+        //Was gettting cors error with the original  url hence added the !st part
         const {data} = await axios.get(`https://cors-anywhere.herokuapp.com/https://covid-news-server.herokuapp.com/news`)
         return data
     }
@@ -53,6 +66,9 @@ export const fetchNews = async ()=>{
     }
 }
 
+/**
+ * Gets the daily details of Indian states
+ */
 export const fetchStateData = async ()=>{
     try{
         const {data} = await axios.get(`${url}/countries/India/confirmed`)

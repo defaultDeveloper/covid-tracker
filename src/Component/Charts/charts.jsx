@@ -33,12 +33,13 @@ const barChart=(
         }}
         options={{
             legend:{display:false},
-            title:{display:true, text:`${country}`,fontColor:theme.palette.type==='light'?'black':'white'},
+            title:{display:true},
             scales: {
                 yAxes: [{
                   display: false
                 }],
                 xAxes: [{
+                    display:false,
                     gridLines: {
                         display:false
                     },

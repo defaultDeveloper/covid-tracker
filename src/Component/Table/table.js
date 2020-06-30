@@ -10,6 +10,8 @@ import styles from './table.module.css'
 import { fetchStateData } from '../../api'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
+
+//Added padding t accomodate the table in  mobile views
 const useStyles = makeStyles({
     tableCell: {
         paddingRight: 4,

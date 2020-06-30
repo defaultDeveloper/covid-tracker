@@ -27,17 +27,12 @@ const Cards = ({ data: { confirmed, deaths, recovered, lastUpdate }, country }) 
 
     return (
         <div className={styles.container}>
-            < Grid container spacing={0} justify="center">
-                <Grid item xs={12} md={9}>
-                    <Typography variant="body1" align="center" gutterBottom>{new Date().toDateString()}</Typography>
-                </Grid>
-            </ Grid>
             <Grid container spacing={0} justify="center">
                 <Grid item component={Card} xs={5} md={2} className={cx(styles.card, styles.infected)}>
                     <Card onClick={() => handleClickOpen()}>
                         <CardActionArea>
                             <CardContent>
-                                <Typography color="textPrimary" gutterBottom>Infected</Typography>
+                                <Typography color="textPrimary" gutterBottom>Confirmed</Typography>
                                 <Typography variant="h5">
                                     <CountUp
                                         start={0}
