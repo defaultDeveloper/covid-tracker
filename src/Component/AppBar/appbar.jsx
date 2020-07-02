@@ -27,12 +27,11 @@ export default function ButtonAppBar({ toggleDarkTheme }) {
 
     return (
         <div className={styles.root}>
-            <AppBar position="static" className={styles.app}>
+            <AppBar position="static" color="default">
                 <Toolbar>
-                    < Grid container spacing={0} justify="center" className={classes.app}>
+                    < Grid container spacing={0} justify="center">
                         <Grid item xs={5} md={9}>
-                            <Typography variant="h6" align="left
-                            " className={classes.title}>
+                            <Typography variant="h6" align="left" className={classes.title}>
                                 COVID-19
                     </Typography>
                         </Grid>

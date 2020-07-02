@@ -19,9 +19,6 @@ const News = () => {
     return (
         <div className={styles.container}>
             < Grid container spacing={0} justify="center">
-                <Grid item xs={12} md={9}>
-                    <Typography variant="h4" align="center" gutterBottom>Headlines</Typography>
-                </Grid>
                 {news.map((article, index) => {
                     return (
                         <Grid item key={index} component={Card} xs={12} md={3} className={styles.card} >
