@@ -1,4 +1,4 @@
 {
-    "newsUrl":"https://cors-anywhere.herokuapp.com/https://covid-news-server.herokuapp.com/news",
+    "newsUrl":"https://covid-news-server.herokuapp.com/news",
     "trackerUrl":"https://covid19.mathdro.id/api"
 }
